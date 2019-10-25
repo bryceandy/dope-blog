@@ -7,16 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ 'css/app.css' }}">
+    <script src="{{ 'js/app.js' }}"></script>
     <title>@yield('title')</title>
 </head>
 <body>
 
-    @if( auth()->check() )
-        {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}
+    <div id="header">
+        DOP.E blog
+    </div>
 
-        <div id="logout">
-            <a href="logout">LOGOUT</a>
-        </div>
+    @if( auth()->check() )
+
+        <p class="user"><b>{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</b></p>
+
+        <div id="logout"><a href="logout">LOGOUT</a></div>
     @else
         Guest user
         <div id="logout">
@@ -25,8 +29,10 @@
     @endif
 
     @yield('content')
-<div id="footer">
 
-</div>
+    <div id="footer">
+
+    </div>
+
 </body>
 </html>

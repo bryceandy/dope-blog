@@ -1,5 +1,13 @@
 body {
   padding: 2% 3%;
+  font-family: "Avenir Next";
+}
+
+#header {
+  text-align: center;
+  width: 100vw;
+  padding: 1rem;
+  font-size: x-large;
 }
 
 .post .name {

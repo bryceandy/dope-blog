@@ -1,8 +1,12 @@
 body{
-  padding: 2% 3%
+  padding: 2% 3%;
+  font: {
+    family: "Avenir Next"
+  }
 }
 
-@import "another";
+@import "templates/main";
+@import "welcome";
 @import "auth/register";
 
 
