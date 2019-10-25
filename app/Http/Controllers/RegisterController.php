@@ -14,6 +14,6 @@ class RegisterController extends Controller
         $validatedData['password'] = bcrypt($validatedData['password']);
 
         User::create($validatedData);
-        back()->with(['message' => 'User registered']) ;
+        return back()->with(['message' => 'User registered successfully!']) ;
     }
 }

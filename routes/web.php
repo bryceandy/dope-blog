@@ -14,6 +14,7 @@
 Route::get('/', function(){
     return view('welcome');
 })->name('welcome');
+
 Route::get('/post/{post}', 'PostController@show');
 
 Route::get('posts', 'PostController@index');
@@ -28,10 +29,10 @@ Route::get('login', function (){
     return view('auth.login');
 })->name('login');
 
+Route::post('login', 'LoginController');
+
 Route::get('logout', function(){
 
     auth()->logout();
     return redirect('login');
 });
-
-Route::post('login', 'LoginController');

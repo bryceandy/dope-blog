@@ -17,7 +17,7 @@ class LoginController extends Controller
             $user = User::whereEmail($validated['email'])->first();
 
             Auth::login($user);
-            redirect('welcome');
+            return redirect('/');
         }
     }
 }
