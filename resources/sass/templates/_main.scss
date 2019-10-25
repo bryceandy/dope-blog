@@ -6,10 +6,21 @@
   background: $secondary-color;
 
   font: {
-    size: x-large;
+    size: 1.5rem;
   }
   .home{
     text-decoration: none;
     color: darken($primary-color, 35%)
   }
+}
+#auth{
+  width: 100vw;
+
+  .guest{
+    padding: 2.5vw
+  }
+}
+#content{
+  width: 100%;
+  padding: 2.5vw
 }

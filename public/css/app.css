@@ -11111,12 +11111,25 @@ body {
   width: 100vw;
   padding: 1rem;
   background: #000000;
-  font-size: x-large;
+  font-size: 1.5rem;
 }
 
 #header .home {
   text-decoration: none;
   color: #b0af07;
+}
+
+#auth {
+  width: 100vw;
+}
+
+#auth .guest {
+  padding: 2.5vw;
+}
+
+#content {
+  width: 100%;
+  padding: 2.5vw;
 }
 
 .post .name {
@@ -11150,20 +11163,45 @@ body {
 #loginForm {
   max-width: 70vw;
   margin-left: 15vw;
-  font-size: x-large;
+  padding: 2.5vw;
+  font-size: 1.1rem;
+  border: 1px solid;
+  border-radius: 4px;
 }
 
 #registrationForm .input-block,
 #loginForm .input-block {
   display: block;
-  line-height: 2;
+  line-height: 2.5;
 }
 
 #registrationForm .input-block input,
 #loginForm .input-block input {
-  width: 30vw;
-  height: 1.5rem;
-  border: 1px solid;
-  border-radius: 4px;
+  width: 60%;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+
+#registrationForm .input-block label,
+#loginForm .input-block label {
+  width: 20%;
+}
+
+#registrationForm button,
+#loginForm button {
+  margin: auto 0;
+}
+
+@media screen and (max-width: 650px) {
+  #registrationForm,
+  #loginForm {
+    max-width: 90vw;
+    margin-left: 5vw;
+  }
+
+  #registrationForm .input-block label,
+  #loginForm .input-block label {
+    width: 35%;
+  }
 }
 

@@ -1,0 +1,42 @@
+#registrationForm, #loginForm{
+  max-width: 70vw;
+  margin: {
+    left: 15vw
+  }
+  padding: 2.5vw;
+  font: {
+    size: 1.1rem;
+  }
+  border: 1px solid;
+  border-radius: 4px;
+  .input-block{
+    display: block;
+    line-height: 2.5;
+
+    input{
+      width: 60%;
+      border: 1px solid grey;
+      border-radius: 2px;
+    }
+    label{
+      width: 20%
+    }
+  }
+  button{
+    margin: auto 0
+  }
+}
+
+@media screen and (max-width: 650px){
+  #registrationForm, #loginForm{
+    max-width: 90vw;
+    margin: {
+      left: 5vw
+    }
+    .input-block{
+      label{
+        width: 35%
+      }
+    }
+  }
+}

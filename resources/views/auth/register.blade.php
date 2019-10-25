@@ -1,19 +1,25 @@
 @extends('templates.main')
 
 @section('title')
-Register Page
+    Register Page
+@endsection
+
+@section('guest')
+    Guest user <a href="login">LOGIN</a>
 @endsection
 
 @section('content')
     <h1>Register</h1>
-    <div id="loginLink">
-        Or <a href="login">LOGIN here</a>
-    </div>
+
     <div id="registrationForm">
 
         @if( $errors->any)
             @foreach( $errors->all() as $error)
-                <li>{{ $error }}</li>
+                <div class="alert-danger">
+                    <ul>
+                        <li>{{ $error }}</li>
+                    </ul>
+                </div>
             @endforeach
         @endif
         <form action="/register" method="post">

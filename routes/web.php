@@ -26,12 +26,12 @@ Route::post('register', 'RegisterController@store');
 
 Route::get('login', function (){
     return view('auth.login');
-});
+})->name('login');
 
 Route::get('logout', function(){
 
     auth()->logout();
-    return view('auth.login');
+    return redirect('login');
 });
 
 Route::post('login', 'LoginController');
