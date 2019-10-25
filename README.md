@@ -13,6 +13,11 @@ Create a copy of the environment variables
 ```
   cp .env.example .env
 ```
+Install relevant dependencies first
+```
+composer install
+npm install
+```
 
 Then create an app key with the artisan command
 ```
