@@ -29,3 +29,24 @@ body {
   text-decoration: none !important;
 }
 
+#registrationForm,
+#loginForm {
+  max-width: 70vw;
+  margin-left: 15vw;
+  font-size: x-large;
+}
+
+#registrationForm .input-block,
+#loginForm .input-block {
+  display: block;
+  line-height: 2;
+}
+
+#registrationForm .input-block input,
+#loginForm .input-block input {
+  width: 30vw;
+  height: 1.5rem;
+  border: 1px solid;
+  border-radius: 4px;
+}
+

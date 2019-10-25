@@ -11,6 +11,27 @@
 |
 */
 
+Route::get('/', function(){
+    return view('welcome');
+});
 Route::get('/post/{post}', 'PostController@show');
 
 Route::get('posts', 'PostController@index');
+
+Route::get('register', function(){
+    return view('auth.register');
+});
+
+Route::post('register', 'RegisterController@store');
+
+Route::get('login', function (){
+    return view('auth.login');
+});
+
+Route::get('logout', function(){
+
+    auth()->logout();
+    return view('auth.login');
+});
+
+Route::post('login', 'LoginController');
