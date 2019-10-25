@@ -2,26 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginUserRequest;
 use App\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function __invoke(Request $request)
+    public function __invoke(LoginUserRequest $request)
     {
-        $validated = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        $validated = $request->validated();
 
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials))
-        {
+        if (Auth::attempt($request->only('email', 'password'))) {
+
             $user = User::whereEmail($validated['email'])->first();
-            \auth()->login($user);
-            return view('welcome');
+
+            Auth::login($user);
+            redirect('welcome');
         }
-        return 'Not authenticated';
     }
 }

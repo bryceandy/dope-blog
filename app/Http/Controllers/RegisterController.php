@@ -7,12 +7,13 @@ use App\User;
 
 class RegisterController extends Controller
 {
-    public function store(RegisterUserRequest $request)
+    public function __invoke(RegisterUserRequest $request)
     {
         $validatedData = $request->validated();
 
         $validatedData['password'] = bcrypt($validatedData['password']);
 
-         return User::create($validatedData);
+        User::create($validatedData);
+        back()->with(['message' => 'User registered']) ;
     }
 }
