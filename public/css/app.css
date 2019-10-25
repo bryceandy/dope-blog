@@ -1,0 +1,31 @@
+body {
+  padding: 2% 3%;
+}
+
+.post .name {
+  color: blue;
+  font-size: x-large;
+}
+
+.post .body {
+  border: 1px solid;
+  width: 30vw;
+  padding: 1% 2%;
+  border-radius: 4px;
+}
+
+.pagination {
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
+
+.pagination li {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.pagination li a {
+  text-decoration: none !important;
+}
+

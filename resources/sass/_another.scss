@@ -1,0 +1,25 @@
+.post{
+  .name{
+    color: blue;
+    font-size: x-large;
+  }
+  .body{
+    border: 1px solid;
+    width: 30vw;
+    padding: 1% 2%;
+    border-radius: 4px;
+  }
+}
+
+.pagination{
+  list-style-type: none;
+  display: inline-flex;
+
+  li{
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    a{
+      text-decoration: none!important;
+    }
+  }
+}
