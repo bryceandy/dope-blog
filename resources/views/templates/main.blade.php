@@ -15,14 +15,15 @@
 </head>
 <body>
 
-    <div id="header" class="text-center">
+    <div id="header">
         <a href="/" class="home">DOP.E - blog</a>
     </div>
 
     <div id="auth" class="text-right">
         @if( auth()->check() )
-            <p class="user"><b>{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</b></p>
-            <div id="logout"><a href="logout">LOGOUT</a></div>
+            <div class="logout">
+                <b>{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</b><a href="logout">LOGOUT</a>
+            </div>
         @else
             <div class="guest">
                 @yield('guest')

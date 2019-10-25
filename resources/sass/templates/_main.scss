@@ -16,7 +16,7 @@
 #auth{
   width: 100vw;
 
-  .guest{
+  .guest, .logout{
     padding: 2.5vw;
 
     a{
@@ -40,5 +40,8 @@
 }
 #content{
   width: 100%;
-  padding: 2.5vw
+  padding: 2.5vw;
+  h1{
+    text-align: center
+  }
 }

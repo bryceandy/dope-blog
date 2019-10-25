@@ -11123,11 +11123,13 @@ body {
   width: 100vw;
 }
 
-#auth .guest {
+#auth .guest,
+#auth .logout {
   padding: 2.5vw;
 }
 
-#auth .guest a {
+#auth .guest a,
+#auth .logout a {
   text-decoration: none;
   border: 1px solid dodgerblue;
   padding: 5px 0.5rem;
@@ -11135,18 +11137,24 @@ body {
   color: dodgerblue;
 }
 
-#auth .guest a:nth-of-type(even) {
+#auth .guest a:nth-of-type(even),
+#auth .logout a:nth-of-type(even) {
   background: dodgerblue;
   color: #fff;
 }
 
-#auth .guest a:nth-of-type(even):hover {
+#auth .guest a:nth-of-type(even):hover,
+#auth .logout a:nth-of-type(even):hover {
   opacity: 0.7;
 }
 
 #content {
   width: 100%;
   padding: 2.5vw;
+}
+
+#content h1 {
+  text-align: center;
 }
 
 .post .name {
@@ -11206,7 +11214,10 @@ body {
 
 #registrationForm button,
 #loginForm button {
-  margin: auto 0;
+  background: #0077ea;
+  color: #fff;
+  border: none;
+  font-weight: lighter;
 }
 
 @media screen and (max-width: 650px) {

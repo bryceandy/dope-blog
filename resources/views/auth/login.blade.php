@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    <h1>Login form</h1>
+    <h1>Login</h1>
 
     <div id="loginForm">
         @if( $errors->any)

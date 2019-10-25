@@ -1,3 +1,5 @@
+@import "../variables";
+
 #registrationForm, #loginForm{
   max-width: 70vw;
   margin: {
@@ -23,7 +25,12 @@
     }
   }
   button{
-    margin: auto 0
+    background: darken(dodgerblue, 10%);
+    color: #fff;
+    border: none;
+    font: {
+      weight: lighter;
+    }
   }
 }
 
