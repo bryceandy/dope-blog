@@ -22,7 +22,7 @@
     <div id="auth" class="text-right">
         @if( auth()->check() )
             <div class="logout">
-                <b>{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</b><a href="logout">LOGOUT</a>
+                <b> @ {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</b><a href="logout">LOGOUT</a>
             </div>
         @else
             <div class="guest">
