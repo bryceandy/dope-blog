@@ -17,7 +17,25 @@
   width: 100vw;
 
   .guest{
-    padding: 2.5vw
+    padding: 2.5vw;
+
+    a{
+      text-decoration: none;
+      border: 1px solid dodgerblue;
+      padding: 5px .5rem;
+      margin: {
+        left: .5rem
+      }
+      color: dodgerblue;
+      &:nth-of-type(even){
+        background: dodgerblue;
+        color: #fff;
+
+        &:hover{
+          opacity: .7
+        }
+      }
+    }
   }
 }
 #content{
