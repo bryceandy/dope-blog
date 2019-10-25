@@ -12,8 +12,8 @@
 </head>
 <body>
 
-    <div id="header">
-        DOP.E blog
+    <div id="header" class="text-center">
+        <a href="/" class="home">DOP.E blog</a>
     </div>
 
     @if( auth()->check() )

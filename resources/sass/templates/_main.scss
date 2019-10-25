@@ -1,9 +1,15 @@
+@import "../variables";
+
 #header{
-  text-align: center;
   width: 100vw;
   padding: 1rem;
+  background: $secondary-color;
 
   font: {
     size: x-large;
+  }
+  .home{
+    text-decoration: none;
+    color: darken($primary-color, 35%)
   }
 }
