@@ -12,6 +12,11 @@
     <h1>Login</h1>
 
     <div id="loginForm">
+        @if( session()->has('error_message') )
+            <div class="alert-danger text-center">
+                {{ session('error_message') }}
+            </div>
+        @endif
         @if( $errors->any)
             @foreach( $errors->all() as $error)
                 <div class="alert-danger">

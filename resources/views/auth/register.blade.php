@@ -13,9 +13,9 @@
 
     <div id="registrationForm">
 
-        @if( session()->has('message') )
+        @if( session()->has('success_message') )
             <div class="alert-info text-center">
-                {{ session('message') }}
+                {{ session('success_message') }}
             </div>
         @endif
         @if( $errors->any)

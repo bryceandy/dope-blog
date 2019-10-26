@@ -15,24 +15,15 @@ Route::get('/', function(){
     return view('welcome');
 })->name('welcome');
 
-Route::get('/post/{post}', 'PostController@show');
+Route::get('register', 'RegisterController@edit')->name('register');
 
-Route::get('posts', 'PostController@index');
+Route::post('register', 'RegisterController@store');
 
-Route::get('register', function(){
-    return view('auth.register');
-});
+Route::get('login', 'LoginController@edit')->name('login');
 
-Route::post('register', 'RegisterController');
+Route::post('login', 'LoginController@session');
 
-Route::get('login', function (){
-    return view('auth.login');
-})->name('login');
+Route::get('logout', 'LoginController@destroy')->name('logout');
 
-Route::post('login', 'LoginController');
-
-Route::get('logout', function(){
-
-    auth()->logout();
-    return redirect('login');
-});
+/*Route::get('/post/{post}', 'PostController@show');
+Route::get('posts', 'PostController@index');*/
