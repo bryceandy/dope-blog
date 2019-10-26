@@ -5,15 +5,16 @@
 @endsection
 
 @section('content')
+    <h1 class="text-center">Blog Posts</h1>
 
-    @foreach( $posts as $post)
+    @if(isset($posts))
+        @foreach( $posts as $post)
+            <div class="post">
+                <h2 class="name"><a href="post/{{ $post->name }}">{{ $post->name }}</a></h2>
+                <p class="body">{{ $post->body }}</p>
+            </div>
+        @endforeach
 
-        <div class="post">
-            <h2 class="name"><a href="post/{{ $post->name }}">{{ $post->name }}</a></h2>
-            <p class="body">{{ $post->body }}</p>
-        </div>
-    @endforeach
-
-    {{ $posts->links() }}
-
+        {{ $posts->links() }}
+    @endif
 @endsection
