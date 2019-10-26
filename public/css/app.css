@@ -11107,16 +11107,22 @@ body {
   font-family: "Avenir Next";
 }
 
+#main-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 12vh 12vh minmax(64vh, auto) 12vh;
+}
+
 #header {
   width: 100vw;
   padding: 1rem;
-  background: #000000;
+  background: #005248;
   font-size: 1.5rem;
 }
 
 #header .home {
   text-decoration: none;
-  color: #b0af07;
+  color: #fff;
 }
 
 #auth {
@@ -11131,15 +11137,15 @@ body {
 #auth .guest a,
 #auth .logout a {
   text-decoration: none;
-  border: 1px solid dodgerblue;
+  border: 1px solid #C0BC84;
   padding: 5px 0.5rem;
   margin-left: 0.5rem;
-  color: dodgerblue;
+  color: #C0BC84;
 }
 
 #auth .guest a:nth-of-type(even),
 #auth .logout a:nth-of-type(even) {
-  background: dodgerblue;
+  background: #C0BC84;
   color: #fff;
 }
 
@@ -11149,12 +11155,18 @@ body {
 }
 
 #content {
-  width: 100%;
+  width: 100vw;
   padding: 2.5vw;
 }
 
 #content h1 {
   text-align: center;
+}
+
+#footer {
+  background: #005248;
+  width: 100vw;
+  padding: 1rem;
 }
 
 .post .name {
@@ -11203,7 +11215,7 @@ body {
 #registrationForm .input-block input,
 #loginForm .input-block input {
   width: 60%;
-  border: 1px solid grey;
+  border: 1px solid #C0BC84;
   border-radius: 2px;
 }
 
@@ -11214,10 +11226,10 @@ body {
 
 #registrationForm button,
 #loginForm button {
-  background: #0077ea;
+  background: #C0BC84;
   color: #fff;
   border: none;
-  font-weight: lighter;
+  padding: 0.5rem;
 }
 
 @media screen and (max-width: 650px) {

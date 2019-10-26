@@ -13,7 +13,7 @@
 
     <title>@yield('title')</title>
 </head>
-<body>
+<body id="main-body">
 
     <div id="header">
         <a href="/" class="home">DOP.E - blog</a>
@@ -35,8 +35,8 @@
         @yield('content')
     </div>
 
-    <div id="footer">
-
+    <div id="footer" class="text-center text-white">
+        <small>&copy; DOP.E 2019</small>
     </div>
 
 </body>

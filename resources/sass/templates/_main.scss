@@ -1,5 +1,11 @@
 @import "../variables";
 
+#main-body{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 12vh 12vh minmax(64vh, auto) 12vh;
+}
+
 #header{
   width: 100vw;
   padding: 1rem;
@@ -10,7 +16,7 @@
   }
   .home{
     text-decoration: none;
-    color: darken($primary-color, 35%)
+    color: #fff
   }
 }
 #auth{
@@ -21,14 +27,14 @@
 
     a{
       text-decoration: none;
-      border: 1px solid dodgerblue;
+      border: 1px solid $primary-color;
       padding: 5px .5rem;
       margin: {
         left: .5rem
       }
-      color: dodgerblue;
+      color: $primary-color;
       &:nth-of-type(even){
-        background: dodgerblue;
+        background: $primary-color;
         color: #fff;
 
         &:hover{
@@ -39,9 +45,14 @@
   }
 }
 #content{
-  width: 100%;
+  width: 100vw;
   padding: 2.5vw;
   h1{
     text-align: center
   }
+}
+#footer{
+  background: $secondary-color;
+  width: 100vw;
+  padding: 1rem
 }
