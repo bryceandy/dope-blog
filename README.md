@@ -31,5 +31,5 @@ Boot up your server
 
 Lastly run your migrations.
 ```
-  php artisan migrate --seed
+  php artisan migrate
 ```
