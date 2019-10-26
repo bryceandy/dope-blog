@@ -11,11 +11,11 @@ class PostController extends Controller
     {
         $posts = Post::paginate(5);
 
-        return view('index', compact('posts'));
+        return view('posts.index', compact('posts'));
     }
 
     public function show(Post $post)
     {
-        return view('home', compact('post'));
+        return view('posts.post', compact('post'));
     }
 }
