@@ -10,4 +10,5 @@
 
 @section('content')
     <h1>Welcome</h1>
+    <h4><i><a href="posts">See posts</a></i></h4>
 @endsection
