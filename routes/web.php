@@ -27,6 +27,6 @@ Route::post('login', 'LoginController@session');
 
 Route::get('logout', 'LoginController@destroy')->name('logout');
 
-Route::get('/post/{post}', 'PostController@show');
+Route::get('post/{post}', 'PostController@show');
 
 Route::get('posts', 'PostController@index');
