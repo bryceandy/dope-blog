@@ -15,8 +15,7 @@ Create a copy of the environment variables
 ```
 Install relevant dependencies first
 ```
-composer install
-npm install
+  composer install && npm install
 ```
 
 Then create an app key with the artisan command
