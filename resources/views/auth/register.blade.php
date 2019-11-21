@@ -5,7 +5,7 @@
 @endsection
 
 @section('guest')
-    Guest user <a href="login">LOGIN</a>
+    Guest user <a href="/login">LOGIN</a>
 @endsection
 
 @section('content')
@@ -18,15 +18,17 @@
                 {{ session('success_message') }}
             </div>
         @endif
+
         @if( $errors->any)
-            @foreach( $errors->all() as $error)
-                <div class="alert-danger">
-                    <ul>
-                        <li>{{ $error }}</li>
-                    </ul>
-                </div>
-            @endforeach
+            <div class="alert-danger">
+                <ul>
+                    @foreach( $errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
+
         <form action="/register" method="post">
             @csrf
             <div class="input-block">

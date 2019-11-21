@@ -5,7 +5,7 @@
 @endsection
 
 @section('guest')
-    Guest user <a href="register">REGISTER</a>
+    Guest user <a href="/register">REGISTER</a>
 @endsection
 
 @section('content')
@@ -18,13 +18,13 @@
             </div>
         @endif
         @if( $errors->any)
-            @foreach( $errors->all() as $error)
-                <div class="alert-danger">
-                    <ul>
-                        <li>{{ $error }}</li>
-                    </ul>
-                </div>
-            @endforeach
+            <div class="alert-danger">
+                <ul>
+                    @foreach( $errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
         <form action="login" method="post">
             @csrf
