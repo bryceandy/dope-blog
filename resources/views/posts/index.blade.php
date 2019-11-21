@@ -21,6 +21,6 @@
 
         {{ $posts->links() }}
     @else
-        <h4><i>There are no posts yet</i></h4>
+        <h4>There are no posts yet</h4>
     @endif
 @endsection

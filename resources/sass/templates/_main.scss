@@ -3,42 +3,45 @@
 #main-body{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 12vh 12vh minmax(64vh, auto) 12vh;
+  grid-template-rows: 12vh minmax(76vh, auto) 12vh;
 }
 
 #header{
   width: 100vw;
   padding: 1rem;
   background: $secondary-color;
+  display: flex;
+  align-items: center;
 
-  font: {
-    size: 1.5rem;
-  }
   .home{
     text-decoration: none;
-    color: #fff
+    color: #fff;
+    font-size: 1.5rem;
+    flex: 0 0 50%;
   }
-}
-#auth{
-  width: 100vw;
+  .auth{
+    flex: 0 0 50%;
+    flex-direction: row-reverse;
+    display: flex;
 
-  .guest, .logout{
-    padding: 2.5vw;
+    .guest, .logout{
+      padding: 2.5vw;
 
-    a{
-      text-decoration: none;
-      border: 1px solid $primary-color;
-      padding: 5px .5rem;
-      margin: {
-        left: .5rem
-      }
-      color: $primary-color;
-      &:nth-of-type(even){
-        background: $primary-color;
-        color: #fff;
+      a{
+        text-decoration: none;
+        border: 1px solid $primary-color;
+        padding: 5px .5rem;
+        margin: {
+          left: .5rem
+        }
+        color: $primary-color;
+        &:nth-of-type(even){
+          background: $primary-color;
+          color: #fff;
 
-        &:hover{
-          opacity: .7
+          &:hover{
+            opacity: .7
+          }
         }
       }
     }

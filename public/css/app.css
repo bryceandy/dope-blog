@@ -11110,32 +11110,44 @@ body {
 #main-body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 12vh 12vh minmax(64vh, auto) 12vh;
+  grid-template-rows: 12vh minmax(76vh, auto) 12vh;
 }
 
 #header {
   width: 100vw;
   padding: 1rem;
   background: #005248;
-  font-size: 1.5rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 #header .home {
   text-decoration: none;
   color: #fff;
+  font-size: 1.5rem;
+  -webkit-box-flex: 0;
+          flex: 0 0 50%;
 }
 
-#auth {
-  width: 100vw;
+#header .auth {
+  -webkit-box-flex: 0;
+          flex: 0 0 50%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
+  display: -webkit-box;
+  display: flex;
 }
 
-#auth .guest,
-#auth .logout {
+#header .auth .guest,
+#header .auth .logout {
   padding: 2.5vw;
 }
 
-#auth .guest a,
-#auth .logout a {
+#header .auth .guest a,
+#header .auth .logout a {
   text-decoration: none;
   border: 1px solid #C0BC84;
   padding: 5px 0.5rem;
@@ -11143,14 +11155,14 @@ body {
   color: #C0BC84;
 }
 
-#auth .guest a:nth-of-type(even),
-#auth .logout a:nth-of-type(even) {
+#header .auth .guest a:nth-of-type(even),
+#header .auth .logout a:nth-of-type(even) {
   background: #C0BC84;
   color: #fff;
 }
 
-#auth .guest a:nth-of-type(even):hover,
-#auth .logout a:nth-of-type(even):hover {
+#header .auth .guest a:nth-of-type(even):hover,
+#header .auth .logout a:nth-of-type(even):hover {
   opacity: 0.7;
 }
 
