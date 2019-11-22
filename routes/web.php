@@ -34,3 +34,5 @@ Route::get('posts', 'PostController@index');
 Route::get('create/post', 'PostController@edit')->middleware('auth');
 
 Route::post('create/post', 'PostController@save')->middleware('auth');
+
+Route::post('comment/{post}', 'CommentController@save')->middleware(['auth', 'can:comment,post']);

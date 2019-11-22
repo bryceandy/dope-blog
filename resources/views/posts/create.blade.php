@@ -4,6 +4,11 @@
     Create Post
 @endsection
 
+@section('header-scripts')
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({selector:'textarea', plugins:'image media link code imagetools'});</script>
+@endsection
+
 @section('content')
     <h1 class="text-center">Create Post</h1>
 
@@ -17,7 +22,7 @@
         </div>
     @endif
 
-    <form action="/create/post" method="post" id="createPostForm">
+    <form action="/create/post" method="post" class="posts" id="createPostForm">
         @if( session()->has('post_success'))
             <div class="alert-info text-center">
                 {{ session('post_success') }}

@@ -8,8 +8,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-        <script>tinymce.init({selector:'textarea', plugins:'image media link code imagetools'});</script>
+        @yield('header-scripts')
         <link rel="stylesheet" href="{{ '/css/app.css' }}">
         <script src="{{ '/js/app.js' }}"></script>
 
