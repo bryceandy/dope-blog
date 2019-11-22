@@ -11107,6 +11107,10 @@ body {
   font-family: "Avenir Next";
 }
 
+input {
+  padding-left: 2.5%;
+}
+
 #main-body {
   display: grid;
   grid-template-columns: 1fr;
