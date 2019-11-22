@@ -10,5 +10,5 @@
 
 @section('content')
     <h1>Welcome</h1>
-    <h4><a href="posts" style="text-decoration: none">See posts 👉</a></h4>
+    <h3><a href="posts" style="text-decoration: none">See posts 👉</a></h3>
 @endsection

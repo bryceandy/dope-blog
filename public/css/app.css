@@ -11141,11 +11141,6 @@ body {
   display: flex;
 }
 
-#header .auth .guest,
-#header .auth .logout {
-  padding: 2.5vw;
-}
-
 #header .auth .guest a,
 #header .auth .logout a {
   text-decoration: none;
