@@ -1,0 +1,40 @@
+@import "../variables";
+
+//blog form
+#createPostForm{
+  max-width: 70vw;
+  margin: {
+    left: 15vw
+  }
+  padding: 2.5vw;
+  font: {
+    size: 1.1rem;
+  }
+  border: 1px solid;
+  border-radius: 4px;
+  .input-block{
+    display: block;
+    line-height: 2.5;
+
+    input{
+      width: 60%;
+    }
+    label{
+      width: 20%
+    }
+  }
+  button{
+    background: $primary-color;
+    color: #fff;
+    border: none;
+    padding: .5rem
+  }
+  textarea{
+    width: 100%;
+    min-height: 30vh
+  }
+  textarea, input{
+    border: 1px solid $primary-color;
+    border-radius: 2px;
+  }
+}

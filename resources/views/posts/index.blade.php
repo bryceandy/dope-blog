@@ -14,8 +14,9 @@
     @if( count($posts))
         @foreach( $posts as $post)
             <div class="post">
-                <h2 class="name"><a href="post/{{ $post->name }}">{{ $post->name }}</a></h2>
-                <p class="body">{{ $post->body }}</p>
+                <h2 class="name"><a href="post/{{ $post->slug }}">{{ $post->title }}</a></h2>
+                <i>by {{ $post->user->first_name }} {{ \Illuminate\Support\Carbon::parse($post->created_at)->diffForHumans() }}</i>
+                <div class="body">{!! $post->body  !!}</div>
             </div>
         @endforeach
 

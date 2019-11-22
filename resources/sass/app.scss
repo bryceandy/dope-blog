@@ -12,12 +12,7 @@ body{
   }
 }
 
-input{
-  padding-left: 2.5%
-}
-
 @import "templates/main";
 @import "welcome";
 @import "auth/forms";
-
-
+@import "blog/create";

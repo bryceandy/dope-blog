@@ -25,12 +25,17 @@ class RegisterController extends Controller
      */
     public function store(RegisterUserRequest $request)
     {
-        $validatedData = $request->validated();
+        //hash password
+        $request['password'] = bcrypt($request->password);
 
-        $validatedData['password'] = bcrypt($validatedData['password']);
+        $user = User::where('email', $request->email)->first();
 
-        User::create($validatedData);
-
+        if ($user) {
+            return back()->with(['error_message' => 'This user already exists']);
+        }
+        //create user
+        User::create($request->all());
+        //return back with a success message
         return back()->with(['success_message' => 'User registered successfully!']) ;
     }
 }

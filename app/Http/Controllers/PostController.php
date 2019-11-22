@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreatePostRequest;
 use App\Post;
 
 class PostController extends Controller
@@ -22,5 +23,17 @@ class PostController extends Controller
     public function show(Post $post)
     {
         return view('posts.post', compact('post'));
+    }
+
+    public function edit()
+    {
+        return view('posts.create');
+    }
+
+    public function save(CreatePostRequest $request)
+    {
+        $request['user_id'] = auth()->id();
+        Post::create($request->all());
+        return back()->with(['post_success' => 'Your article is posted']);
     }
 }

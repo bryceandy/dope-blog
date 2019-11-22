@@ -19,6 +19,12 @@
             </div>
         @endif
 
+        @if( session()->has('error_message'))
+            <div class="alert-danger text-center">
+                {{ session('error_message') }}
+            </div>
+        @endif
+
         @if( $errors->any)
             <div class="alert-danger">
                 <ul>
@@ -33,7 +39,10 @@
             @csrf
             <div class="input-block">
                 <label for="first_name">First name</label>
-                <input type="text" id="first_name" name="first_name">
+                <input type="text" id="first_name" name="first_name" {{--value="{{ old('first_name') }}" class="@error('first_name') is-invalid @enderror"--}}>
+                {{--@error('first_name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror--}}
             </div>
 
             <div class="input-block">
