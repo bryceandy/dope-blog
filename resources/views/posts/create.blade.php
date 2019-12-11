@@ -36,7 +36,7 @@
         </div>
 
         <label for="body">Body</label>
-        <textarea name="body" id="body"></textarea>
+        <textarea name="body" id="body" style="min-height: 60vh"></textarea>
 
         <button type="submit">SUBMIT</button>
     </form>
