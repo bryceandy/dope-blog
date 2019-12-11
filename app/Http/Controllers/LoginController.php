@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginUserRequest;
 use App\User;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class LoginController extends Controller
 {
@@ -12,7 +16,7 @@ class LoginController extends Controller
     /**
      * Display the login form
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function edit()
     {
@@ -23,7 +27,7 @@ class LoginController extends Controller
      * Authenticate user and login
      *
      * @param LoginUserRequest $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return RedirectResponse|Redirector
      */
     public function session(LoginUserRequest $request)
     {
@@ -42,7 +46,7 @@ class LoginController extends Controller
     /**
      * Logout the authenticated user
      *
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return RedirectResponse|Redirector
      */
     public function destroy()
     {
