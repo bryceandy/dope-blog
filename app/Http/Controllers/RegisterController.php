@@ -7,35 +7,23 @@ use App\User;
 
 class RegisterController extends Controller
 {
-    /**
-     * Display the registration form
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+    // Display the registration form
     public function edit()
     {
         return view('auth.register');
     }
 
-    /**
-     * Register user
-     *
-     * @param RegisterUserRequest $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    // Register user and save in the db
     public function store(RegisterUserRequest $request)
     {
-        //hash password
-        $request['password'] = bcrypt($request->password);
+        $request['password'] = bcrypt($request->password); //hash password
 
         $user = User::where('email', $request->email)->first();
-
-        if ($user) {
+        if ($user) { //check if user exists
             return back()->with(['error_message' => 'This user already exists']);
         }
-        //create user
+
         User::create($request->all());
-        //return back with a success message
         return back()->with(['success_message' => 'User registered successfully!']) ;
     }
 }

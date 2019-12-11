@@ -7,19 +7,16 @@ use App\Post;
 
 class CommentController extends Controller
 {
+    // Save comment in the db
     public function save(Post $post)
     {
-
-        $this->validate(request(), [
-            'body' => 'required|min:5'
-        ]);
+        $this->validate(request(), ['body' => 'required|min:5']);
 
         Comment::create([
             'user_id' => auth()->id(),
             'post_id' => $post->id,
-            'body' => request()->body
+            'body' => request()->body,
         ]);
-
         return back()->with(['comment_success' => 'Your comment was saved']);
     }
 }
