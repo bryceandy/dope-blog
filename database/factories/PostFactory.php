@@ -1,14 +1,17 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/** @var Factory $factory */
 
 use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factory;
 
 $factory->define(\App\Post::class, function (Faker $faker) {
 
     return [
-        'title' => $faker->text(20),
+        'title' => $faker->sentence,
         'body' => $faker->paragraphs,
-        'user_id' => $faker->numberBetween(1, \App\User::all()->count())
+        'user_id' => static function() {
+            return factory(\App\User::class)->create()->id;
+        }
     ];
 });
