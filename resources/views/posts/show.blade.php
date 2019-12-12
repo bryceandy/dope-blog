@@ -23,7 +23,7 @@
                 <h3>All comments</h3>
                 @foreach($post->comments as $comment)
                     <div style="border:1px solid;margin:2%;padding:2vw;border-radius:4px">
-                        <i style="float:right;font-size:small">{{ $comment->user->first_name }} said {{ $comment->created_at->diffForHumans() }}</i>
+                        <i style="float:right;font-size:small">{{ $comment->user->first_name }} - {{ $comment->created_at->diffForHumans() }}</i>
                         <p style="margin-top:20px">{{ $comment->body }}</p>
                     </div>
                 @endforeach
@@ -38,7 +38,7 @@
 
         <form action="/comment/{{ $post->slug }}" method="post" class="posts" style="border:unset;max-width:50vw;margin-left:0">
             @csrf
-            <label for="body">Comment</label>
+            <label for="body">Add comment</label>
             <textarea name="body" id="body" @guest placeholder="Login to comment..." @endguest></textarea>
             <button type="submit" @guest disabled @endguest>SUBMIT</button>
         </form>
