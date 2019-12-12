@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreatePostRequest;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -30,8 +31,10 @@ class PostController extends Controller
     // Create a new post and save in the db
     public function store(CreatePostRequest $request)
     {
-        $request['user_id'] = auth()->id();
+        $request['user_id'] = Auth::id();
+
         Post::create($request->all());
+
         return back()->with(['post_success' => 'Your article is posted']);
     }
 }

@@ -18,8 +18,8 @@ class RegisterController extends Controller
     {
         $request['password'] = bcrypt($request->password); //hash password
 
-        $user = User::where('email', $request->email)->first();
-        if ($user) { //check if user exists
+        $user = User::where('email', $request->email)->first(); //check if user exists
+        if ($user) {
             return back()->with(['error_message' => 'This user already exists']);
         }
 
