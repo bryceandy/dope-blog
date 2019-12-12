@@ -28,7 +28,7 @@ class PostController extends Controller
     }
 
     // Create a new post and save in the db
-    public function save(CreatePostRequest $request)
+    public function store(CreatePostRequest $request)
     {
         $request['user_id'] = auth()->id();
         Post::create($request->all());

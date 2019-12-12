@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class CommentController extends Controller
 {
     // Save comment in the db
-    public function save(CreateCommentRequest $request, Post $post)
+    public function store(CreateCommentRequest $request, Post $post)
     {
         Comment::create([
             'user_id' => Auth::id(),
