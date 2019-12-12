@@ -18,7 +18,7 @@ class PostController extends Controller
     // Display a single post
     public function show(Post $post)
     {
-        return view('posts.post', compact('post'));
+        return view('posts.show', compact('post'));
     }
 
     // Display form to create a new post
