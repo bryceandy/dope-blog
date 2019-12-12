@@ -41,8 +41,18 @@
         @endguest
         <form action="/comment/{{ $post->slug }}" method="post" class="posts" style="border:unset;max-width:80%;margin-left:0;padding:0">
             @csrf
+            @if( $errors->any)
+                <div class="alert-danger">
+                    <ul>
+                        @foreach( $errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <label for="body"></label>
-            <textarea name="body" id="body" placeholder="Say something..."></textarea>
+            <textarea name="body" id="body" required placeholder="Say something..."></textarea>
             <button type="submit" @guest disabled @endguest>SUBMIT</button>
         </form>
     </div>
