@@ -23,7 +23,7 @@
                 <h3>All comments</h3>
                 @foreach($post->comments as $comment)
                     <div style="border:1px solid;margin:2%;padding:2vw;border-radius:4px">
-                        <i style="float:right;font-size:small">{{ $comment->user->first_name }} said {{ $post->created_at->diffForHumans() }}</i>
+                        <i style="float:right;font-size:small">{{ $comment->user->first_name }} said {{ $comment->created_at->diffForHumans() }}</i>
                         <p style="margin-top:20px">{{ $comment->body }}</p>
                     </div>
                 @endforeach
