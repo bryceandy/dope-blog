@@ -21,7 +21,7 @@
             <div class="auth">
                 @if( auth()->check() )
                     <div class="logout">
-                        <b> @ {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</b><a href="/logout">LOGOUT</a>
+                        <b style="color:#fff"> @ {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</b><a href="/logout">LOGOUT</a>
                     </div>
                 @else
                     <div class="guest">

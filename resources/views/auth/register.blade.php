@@ -5,7 +5,7 @@
 @endsection
 
 @section('guest')
-    Guest user <a href="/login">LOGIN</a>
+    <a href="/login">LOGIN</a>
 @endsection
 
 @section('content')

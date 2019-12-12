@@ -5,7 +5,7 @@
 @endsection
 
 @section('guest')
-    Guest user<a href="/register">REGISTER</a> <a href="/login">LOGIN</a>
+    <a href="/register">REGISTER</a> <a href="/login">LOGIN</a>
 @endsection
 
 @section('content')
@@ -22,7 +22,7 @@
             @if( count($post->comments))
                 <h3>All comments</h3>
                 @foreach($post->comments as $comment)
-                    <div style="border:1px solid lightgrey;margin:1%;padding:1vw;border-radius:4px">
+                    <div class="mb-4" style="border:1px solid lightgrey;padding:1vw;border-radius:4px">
                         <i style="float:right;font-size:small">{{ $comment->user->first_name }} - {{ $comment->created_at->diffForHumans() }}</i>
                         <p style="margin-top:20px">{{ $comment->body }}</p>
                     </div>
