@@ -12,17 +12,18 @@
 
     <h1 class="mb-4">{{ $post->title }}</h1>
 
+    <i style="font-size:small;color:grey" class="mb-3"><span style="color:black">{{ $post->user->first_name }}</span> {{ $post->created_at->diffForHumans() }}</i>
     <div class="w-50">
         <div class="mb-5" style="line-height: 1.75">
             {!! $post->body !!}
         </div>
 
-        <div style="max-width:50vw">
+        <div>
             @if( count($post->comments))
                 <h3>All comments</h3>
                 @foreach($post->comments as $comment)
                     <div style="border:1px solid;margin:2%;padding:2vw;border-radius:4px">
-                        <i style="float:right;font-size:small">by {{ $comment->user->first_name }} {{ $post->created_at->diffForHumans() }}</i>
+                        <i style="float:right;font-size:small">{{ $comment->user->first_name }} said {{ $post->created_at->diffForHumans() }}</i>
                         <p style="margin-top:20px">{{ $comment->body }}</p>
                     </div>
                 @endforeach
