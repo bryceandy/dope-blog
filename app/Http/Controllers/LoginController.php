@@ -18,13 +18,10 @@ class LoginController extends Controller
     // Authenticate user and login
     public function session(LoginUserRequest $request)
     {
-        $validated = $request->validated();
-
         if (Auth::attempt($request->only('email', 'password'))) {
 
-            $user = User::where('email', $validated['email'])->first();
+            Auth::login(User::where('email', $request['email'])->first());
 
-            Auth::login($user);
             return redirect()->to( '/');
         }
         return back()->with(['error_message' => 'Your email and or password is incorrect']);
@@ -33,7 +30,8 @@ class LoginController extends Controller
     // Logout the authenticated user
     public function destroy()
     {
-        auth()->logout();
+        Auth::logout();
+
         return redirect('login');
     }
 }
