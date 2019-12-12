@@ -19,7 +19,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><a href="post/{{ $post->slug }}">{{ $post->title }}</a></h5>
                             <p class="card-text" style="overflow:hidden;white-space: nowrap;text-overflow:ellipsis">{!! $post->body  !!}</p>
-                            <a href="post/{{ $post->slug }}" class="btn btn-primary">Read More</a>
+                            <a href="post/{{ $post->slug }}" class="btn button-primary">Read More</a>
                         </div>
                     </div>
                     <i style="font-size:small;color:grey">by <span style="color:black">{{ $post->user->first_name }}</span> {{ $post->created_at->diffForHumans() }}</i>
