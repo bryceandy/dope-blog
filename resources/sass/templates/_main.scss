@@ -1,5 +1,11 @@
 @import "../variables";
 
+.button-primary{
+  background: $primary-color;
+  border-radius: 0;
+  color: #fff
+}
+
 #main-body{
   display: grid;
   grid-template-columns: 1fr;
