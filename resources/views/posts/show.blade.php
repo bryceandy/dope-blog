@@ -36,10 +36,13 @@
             </div>
         @endif
 
-        <form action="/comment/{{ $post->slug }}" method="post" class="posts" style="border:unset;max-width:50vw;margin-left:0">
+        @guest
+            <p>Please <a href="/login">login</a> to participate!</p>
+        @endguest
+        <form action="/comment/{{ $post->slug }}" method="post" class="posts" style="border:unset;max-width:80%;margin-left:0;padding:0">
             @csrf
-            <label for="body">Add comment</label>
-            <textarea name="body" id="body" @guest placeholder="Login to comment..." @endguest></textarea>
+            <label for="body"></label>
+            <textarea name="body" id="body" placeholder="Say something..."></textarea>
             <button type="submit" @guest disabled @endguest>SUBMIT</button>
         </form>
     </div>
