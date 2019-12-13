@@ -12,7 +12,7 @@
 
     <h1 class="mb-4">{{ $post->title }}</h1>
 
-    <div class="row">
+    <div class="row show-content">
         <div class="col-lg-3 col-md-2 col-sm-1"></div>
         <div class="col-lg-6 col-md-8 col-sm-10">
             <i style="font-size:small;color:grey" class="mb-3"><span style="color:black">{{ $post->user->first_name }}</span> {{ $post->created_at->diffForHumans() }}</i>
