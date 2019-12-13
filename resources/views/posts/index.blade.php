@@ -18,7 +18,11 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title"><a href="post/{{ $post->slug }}">{{ $post->title }}</a></h5>
-                            <p class="card-text" style="overflow:hidden;white-space: nowrap;text-overflow:ellipsis">{!! $post->body  !!}</p>
+                            @if( preg_match('/<img(.*)>/', $post->body, $images) )
+                                <a href="post/{{ $post->slug }}" class="cover-image">{!! $images[0] !!}</a>
+                            @else
+                                <p class="card-text" style="overflow:hidden;white-space: nowrap;text-overflow:ellipsis">{!! $post->body  !!}</p>
+                            @endif
                             <a href="post/{{ $post->slug }}" class="btn button-primary">Read More</a>
                         </div>
                     </div>
