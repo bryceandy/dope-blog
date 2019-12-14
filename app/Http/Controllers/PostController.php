@@ -11,7 +11,7 @@ class PostController extends Controller
     // Display all posts
     public function index()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::latest()->paginate(5);
 
         return view('posts.index', compact('posts'));
     }
