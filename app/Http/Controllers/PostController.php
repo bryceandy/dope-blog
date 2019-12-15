@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only(['edit', 'store']);
+        $this->middleware('auth')->only(['create', 'store']);
     }
 
     // Display all posts
@@ -28,7 +28,7 @@ class PostController extends Controller
     }
 
     // Display form to create a new post
-    public function edit()
+    public function create()
     {
         return view('posts.create');
     }

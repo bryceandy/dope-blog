@@ -28,13 +28,14 @@ Route::post('login', 'LoginController@store');
 Route::get('logout', 'LoginController@destroy')->name('logout');
 
 
-Route::get('posts/{post}', 'PostController@show');
+/*Route::get('posts/{post}', 'PostController@show');
 
 Route::get('posts', 'PostController@index');
 
-Route::get('posts/create', 'PostController@edit');
+Route::get('posts/create', 'PostController@create');
 
-Route::post('posts/create', 'PostController@store');
+Route::post('posts', 'PostController@store');*/
 
+Route::resource('posts', 'PostController');
 
 Route::post('comments/create/{post}', 'CommentController@store')->middleware(['auth', 'can:comment,post']);

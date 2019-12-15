@@ -22,7 +22,7 @@
         </div>
     @endif
 
-    <form action="/posts/create" method="post" class="posts" id="createPostForm">
+    <form action="/posts" method="post" class="posts" id="createPostForm">
         @if( session()->has('post_success'))
             <div class="alert-info text-center">
                 {{ session('post_success') }}
