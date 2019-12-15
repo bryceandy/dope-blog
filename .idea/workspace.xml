@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f41b519d-3e7b-4945-970c-1a1b6d263c3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +221,7 @@
       <workItem from="1576352484084" duration="44000" />
       <workItem from="1576352540641" duration="18000" />
       <workItem from="1576400384993" duration="2641000" />
+      <workItem from="1576403939867" duration="386000" />
     </task>
     <servers />
   </component>
@@ -259,9 +261,9 @@
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state width="1398" height="383" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1576268942285" />
-    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1576401692811">
+    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1576403997277">
       <screen x="0" y="23" width="1440" height="840" />
     </state>
-    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup/0.23.1440.840@0.23.1440.840" timestamp="1576401692811" />
+    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup/0.23.1440.840@0.23.1440.840" timestamp="1576403997277" />
   </component>
 </project>
