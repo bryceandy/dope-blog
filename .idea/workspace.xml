@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f41b519d-3e7b-4945-970c-1a1b6d263c3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f41b519d-3e7b-4945-970c-1a1b6d263c3d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,6 +217,7 @@
       <workItem from="1576350127512" duration="1541000" />
       <workItem from="1576352484084" duration="44000" />
       <workItem from="1576352540641" duration="18000" />
+      <workItem from="1576400384993" duration="1719000" />
     </task>
     <servers />
   </component>
@@ -260,9 +257,9 @@
       <screen x="0" y="23" width="1440" height="840" />
     </state>
     <state width="1398" height="383" key="GridCell.Tab.0.right/0.23.1440.840@0.23.1440.840" timestamp="1576268942285" />
-    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1576350830104">
+    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1576401692811">
       <screen x="0" y="23" width="1440" height="840" />
     </state>
-    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup/0.23.1440.840@0.23.1440.840" timestamp="1576350830104" />
+    <state x="413" y="187" width="670" height="676" key="search.everywhere.popup/0.23.1440.840@0.23.1440.840" timestamp="1576401692811" />
   </component>
 </project>
