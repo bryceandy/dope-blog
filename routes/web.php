@@ -23,7 +23,7 @@ Route::post('register', 'RegisterController@store');
 
 Route::get('login', 'LoginController@edit')->name('login');
 
-Route::post('login', 'LoginController@session');
+Route::post('login', 'LoginController@store');
 
 Route::get('logout', 'LoginController@destroy')->name('logout');
 

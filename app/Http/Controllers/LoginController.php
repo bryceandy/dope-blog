@@ -16,7 +16,7 @@ class LoginController extends Controller
     }
 
     // Authenticate user and login
-    public function session(LoginUserRequest $request)
+    public function store(LoginUserRequest $request)
     {
         if (Auth::attempt($request->only('email', 'password'))) {
 
