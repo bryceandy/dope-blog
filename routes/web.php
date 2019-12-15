@@ -37,4 +37,4 @@ Route::get('posts/create', 'PostController@edit');
 Route::post('posts/create', 'PostController@store');
 
 
-Route::post('comment/{post}', 'CommentController@store')->middleware(['auth', 'can:comment,post']);
+Route::post('comments/create/{post}', 'CommentController@store')->middleware(['auth', 'can:comment,post']);

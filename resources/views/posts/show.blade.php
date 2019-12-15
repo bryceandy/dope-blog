@@ -42,7 +42,7 @@
                 @guest
                     <p>Please <a href="/login">login</a> to participate!</p>
                 @endguest
-                <form action="/comment/{{ $post->slug }}" method="post" class="posts" style="border:unset;max-width:80%;margin-left:0;padding:0">
+                <form action="/comments/create/{{ $post->slug }}" method="post" class="posts" style="border:unset;max-width:80%;margin-left:0;padding:0">
                     @csrf
                     @if( $errors->any)
                         <div class="alert-danger">
