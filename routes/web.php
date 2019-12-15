@@ -38,4 +38,4 @@ Route::post('posts', 'PostController@store');*/
 
 Route::resource('posts', 'PostController');
 
-Route::post('comments/create/{post}', 'CommentController@store')->middleware(['auth', 'can:comment,post']);
+Route::post('comments/{post}', 'CommentController@store')->middleware(['auth', 'can:comment,post']);
