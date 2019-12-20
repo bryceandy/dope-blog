@@ -1,0 +1,14 @@
+1. Can the post slug be saved? Updated index & show templates
+
+2. no? Testing:
+ - DB factories
+ i)   Unit tests for a Post( has a creator, has comments, can add a comment )
+ ii)  Unit tests for a Comment (has an owner )
+ iii) ViewPosts ( view all, view a single post, view comments associated with the post )
+ iv)  CreatePost ( an authenticated user can create, guests may not create, validation[requires body, title] )
+ v)   ParticipateInBlogPosts ( guests may not participate, authenticated users may participate )
+ Etc...
+
+3. Go back to a previous page after login/logout
+4. Replies
+5.
