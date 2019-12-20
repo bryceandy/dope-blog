@@ -10,5 +10,19 @@
  Etc...
 
 3. Go back to a previous page after login/logout
+
+✅ Topics: ROUTING, MIDDLEWARE, CSRF-PROTECTION, CONTROLLERS, REQUESTS, RESPONSES, VIEWS, SESSION, VALIDATION,
+                  BLADE TEMPLATES, FRONTEND SCAFFOLDING, COMPILING ASSETS, AUTHENTICATION, AUTHORIZATION, HASHING,
+                  RELATIONSHIPS, TESTING
+
+❌ More topics: EMAIL VERIFICATION, ENCRYPTION, PASSWORD RESET, SERVICE CONTAINER, BROADCASTING, CACHE, QUEUES, EVENTS,
+                STORAGE, MAIL, NOTIFICATIONS, QUERY BUILDER, SEEDING, MUTATORS
+
 4. Replies
-5.
+
+5. Tags ( A tag can be used on multiple posts. When you visit localhost/tag/{tag}, it should lists all posts for that tag.)
+Hint: Use a many to many relationship, and learn how to use a pivot table.
+
+6. Forgot password & reset password
+
+7. Send notifications when a comment or post is added ( Use emails to notify )
