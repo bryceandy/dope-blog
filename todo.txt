@@ -1,4 +1,4 @@
-1. Can the post slug be saved? Updated index & show templates
+1. Can the post slug be saved? Updated routes, index & show templates
 
 2. no? Testing:
  - DB factories
@@ -16,7 +16,7 @@
                   RELATIONSHIPS, TESTING
 
 ❌ More topics: EMAIL VERIFICATION, ENCRYPTION, PASSWORD RESET, SERVICE CONTAINER, BROADCASTING, CACHE, QUEUES, EVENTS,
-                STORAGE, MAIL, NOTIFICATIONS, QUERY BUILDER, SEEDING, MUTATORS
+                STORAGE, MAIL, NOTIFICATIONS, QUERY BUILDER, SEEDING, MUTATORS, URL GENERATION
 
 4. Replies
 
@@ -24,5 +24,11 @@
 Hint: Use a many to many relationship, and learn how to use a pivot table.
 
 6. Forgot password & reset password
+    i) A new page with a form for submitting the email. It checks if the user exists and sends a password reset email with a link to reset
+    ii) Set the link to expire after a specific time
+    iii) The link should be secure such that no one is able to guess
 
 7. Send notifications when a comment or post is added ( Use emails to notify )
+
+8. Add a user subscription form in the homepage. For every user that subscribes, send them an email when a new post is published.
+Use Queues for this functionality when sending multiple emails.
