@@ -18,10 +18,10 @@
 ❌ More topics: EMAIL VERIFICATION, ENCRYPTION, PASSWORD RESET, SERVICE CONTAINER, BROADCASTING, CACHE, QUEUES, EVENTS,
                 STORAGE, MAIL, NOTIFICATIONS, QUERY BUILDER, SEEDING, MUTATORS, URL GENERATION
 
-4. Replies
-
-5. Tags ( A tag can be used on multiple posts. When you visit localhost/tag/{tag}, it should lists all posts for that tag.)
+4. Tags ( A tag can be used on multiple posts. When you visit localhost/tag/{tag}, it should lists all posts for that tag.)
 Hint: Use a many to many relationship, and learn how to use a pivot table.
+
+5. Replies
 
 6. Forgot password & reset password
     i) A new page with a form for submitting the email. It checks if the user exists and sends a password reset email with a link to reset
